@@ -18,6 +18,7 @@ class SignUpForm extends React.Component{
         })
     }
 
+
     newUser = () => {
         fetch(`http://localhost:3000/api/v1/users`, {
             method: 'POST',
@@ -40,13 +41,11 @@ class SignUpForm extends React.Component{
     handleSubmit = () => {
         if(this.state.password === this.state.passwordConfirmation){
             this.newUser()
-
+            this.props.history.push('/home')
         } else {
             alert('Passwords do not match!')
         } 
     }
-
-
 
 
     render(){
@@ -55,16 +54,16 @@ class SignUpForm extends React.Component{
                 <div className="user-signup">
                     <Form id='signup-form' onSubmit={this.handleSubmit}>
                         <Form.Field>
-                            <input onChange={this.handleChange} name="username" value={this.state.username} placeholder="Username" />
+                            <input onChange={this.handleChange} name="username" value={this.state.username} placeholder="Username" required/>
                         </Form.Field>
                         <Form.Field>
-                            <input onChange={this.handleChange} name="profile_pic" value={this.state.profile_pic} placeholder="Profile Pic" />
+                            <input onChange={this.handleChange} name="profile_pic" value={this.state.profile_pic} placeholder="Profile Pic" required/>
                         </Form.Field>
                         <Form.Field>
-                            <input onChange={this.handleChange} type="password" name="password" value={this.state.password} placeholder="Password" />
+                            <input onChange={this.handleChange} type="password" name="password" value={this.state.password} placeholder="Password" required/>
                         </Form.Field>
                         <Form.Field>
-                            <input onChange={this.handleChange} type="password" name="passwordConfirmation" value={this.state.passwordConfirmation} placeholder="Confirm Password" />
+                            <input onChange={this.handleChange} type="password" name="passwordConfirmation" value={this.state.passwordConfirmation} placeholder="Confirm Password" required/>
                         </Form.Field>
                         
                         <Button type="submit">Submit</Button>

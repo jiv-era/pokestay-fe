@@ -1,15 +1,21 @@
 import React from 'react';
 
-const CityCard = (props) =>{
+class CityCard extends React.Component{
 
+    handleClick = () =>{
+        this.props.selectCity(this.props.id)
+    }
+
+render(){
     return(
-        <div >
-            <h1>{props.city.name}</h1>
-            <image src={props.city.img_url} />              
+        <div onClick={this.handleClick} className="city-card">
+            <h1>{this.props.city.name}</h1>
+            <div className="img-wrapper">
+                <img className="image" src={this.props.city.img_url} alt={this.props.city.name} />
+            </div>            
         </div>
-    );
-
-
+        );
+    }
 }
 
 

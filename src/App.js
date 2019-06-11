@@ -3,6 +3,7 @@ import './App.css';
 
 import Home from './static/Home.js'
 
+// import Profile from './user/Profile.js'
 import LoginForm from './user/LoginForm.js'
 import SignUpForm from './user/SignUpForm.js'
 
@@ -15,10 +16,11 @@ class App extends React.Component {
   }
 
   logOut = () => {
+    localStorage.removeItem('user_id')
     this.setState({
       currentUser: null
-    }, () => {
-      this.props.history.push(`/login`)
+    }, () => { 
+      window.location.href = '/login'
     })
   }
 
@@ -41,7 +43,6 @@ class App extends React.Component {
         }
       })
     }
-
   }
 
   setCurrentUser = (user) => {
@@ -58,8 +59,8 @@ class App extends React.Component {
     return (
         <div className="App">
           <Switch>
-          <Route path="/home" component={Home} />
-          <Route path="/login" render={(routerProps) => { return <LoginForm  setCurrentUser={this.setCurrentUser} {...routerProps} />}} /> 
+          <Route path="/home" render={(routerProps) => { return <Home logOut={this.logOut} {...routerProps} />}} />
+          <Route path="/login" render={(routerProps) => { return <LoginForm setCurrentUser={this.setCurrentUser} {...routerProps} />}} /> 
           <Route path="/signup" render={(routerProps) => { return <SignUpForm setCurrentUser={this.setCurrentUser} {...routerProps} />}} />
           </Switch>        
         </div>

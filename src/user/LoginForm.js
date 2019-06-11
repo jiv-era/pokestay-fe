@@ -33,6 +33,7 @@ class LoginForm extends React.Component {
                 alert(data.errors)
             } else {
                 this.props.setCurrentUser(data)
+                this.props.history.push('/home')
             }
         }); 
     }
