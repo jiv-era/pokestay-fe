@@ -31,6 +31,8 @@ class LoginForm extends React.Component {
         .then(data => {
             if(data.errors){
                 alert(data.errors)
+            } else {
+                this.props.setCurrentUser(data)
             }
         }); 
     }
@@ -52,7 +54,7 @@ class LoginForm extends React.Component {
                     <Button type="submit">Submit</Button>
                     <br/>
                     <br/>
-                    <a href="#">Not a Member?</a>
+                    <a href="/signup">Not a Member?</a>
                 </Form>
                 <footer>
                     <h3>©Copyright 2019</h3>

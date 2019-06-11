@@ -28,12 +28,19 @@ class SignUpForm extends React.Component{
             body: JSON.stringify(this.state)
         })
         .then(resp => resp.json())
-        .then(console.log)
+        .then((newData) => {
+            if(newData.errors){
+                alert(newData.errors)
+            } else {
+                this.props.setCurrentUser(newData)
+            }
+        })
     }
 
     handleSubmit = () => {
         if(this.state.password === this.state.passwordConfirmation){
             this.newUser()
+
         } else {
             alert('Passwords do not match!')
         } 
