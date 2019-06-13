@@ -1,21 +1,42 @@
-import React from 'react'
+import React from 'react';
+import HomeCard from '../home/HomeCard.js';
 
 
-const CityDetails = (props) => {
+class CityDetails extends React.Component {
 
-    return(
-        <div>
+    state = {
+        showHomes: true
+    }
 
-        <h1>hello there! {props.name}!</h1>
-        <h2>{props.region}</h2>
-        <button>Available Homes</button>
-        <button onClick={() => props.goBack()}>Go Back</button>
-        </div>
-    )
+    renderHomeCards = () => {
+        return this.props.homes.map(home =>{
+            return <HomeCard key={home.id} {...home} currentUser={this.props.currentUser} />
+        })
+    }
+    handleClick = () => {
+        this.setState(prevState => ({
+            showHomes: !prevState.showHomes
+        }))
+    }
 
 
+    render(){
+        return(
+            <div>
+                <h1>Welcome to {this.props.name}!</h1>
+                <h2>{this.props.region}</h2>
+                <button onClick={() => this.props.back()}>Back</button>
+                <button onClick={() => this.handleClick()}>Available Homes</button>
+                { this.state.showHomes? 
+                <div className="home-list">
+                    {this.renderHomeCards()}
+                </div> : null
+                }
+            </div>
+        )
+    }
+} 
 
-}
 
 
 export default CityDetails;

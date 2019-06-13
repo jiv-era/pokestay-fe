@@ -1,7 +1,7 @@
 import React from 'react';
 import Navbar from '../global/Navbar.js'
 import CityContainer from '../city/CityContainer.js';
-// import HomesContainer from '../city/HomesContainer.js'
+
 
 class Home extends React.Component {
 
@@ -23,18 +23,10 @@ class Home extends React.Component {
         return(
             <div>
             <button onClick={this.props.logOut}>Log Out</button>
-            <CityContainer cities={this.state.cities}/>
-
-
+            <CityContainer currentUser={this.props.currentUser} cities={this.state.cities}/>
             </div>
         )
     }
-
-
-
-
-
-
 }
 
 

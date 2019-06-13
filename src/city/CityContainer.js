@@ -15,7 +15,12 @@ class CityContainer extends React.Component{
   }
 
   renderCityCards() {
-    return this.props.cities.map(city => <CityCard key={city.id} city={city} selectCity={this.selectCity} {...city}/>)
+    return this.props.cities.map(city => 
+    <CityCard 
+      key={city.id} 
+      city={city} 
+      selectCity={this.selectCity} 
+      {...city}/>)
   }
 
   backButton = () => {
@@ -24,18 +29,15 @@ class CityContainer extends React.Component{
     })
   }
 
-   
-  
-
   render(){
       
         let activeCity = this.props.cities.find(city => city.id === this.state.currentCity)
 
         if(activeCity){
-          return <CityDetails  goBack={this.backButton} {...activeCity} />
+          return <CityDetails currentUser={this.props.currentUser} back={this.backButton} {...activeCity} />
         } else {
           return (
-            <div className="cities">
+            <div className="city-list">
               {this.renderCityCards()}
             </div>
       )

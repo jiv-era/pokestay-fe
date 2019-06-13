@@ -1,22 +1,43 @@
 import React from 'react';
 
+class HomeCard extends React.Component {
 
 
+    state = {
+        user_id: this.props.currentUser.id,
+        home_id: this.props.id
+    }
 
-const HomeCard = (props) => {
 
-    return(
-        <div>
-            <h1>{props.home.name}</h1>
-            <h2>{props.home.city}</h2>
-            <div className="img-wrapper">
-                <img className="image" src={props.home.img_url} alt={props.home.name} />
-            </div>  
-            <h3>Price: {props.home.price}</h3> 
-            <button>Make Reservation</button>
-              
-        </div>
-    );
+    newReservation = () => {
+        fetch(`http://localhost:3000/api/v1/reservations`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accepts': 'application/json'
+            },
+            body: JSON.stringify(this.state)
+        })
+    }
+
+
+    handleClick = () => {
+        this.newReservation()
+    }
+
+    render(){
+        return(
+            <div className="home-card">
+                <h1>{this.props.name}</h1>
+                <h2>{this.props.city_id}</h2>
+                <div className="img-wrapper">
+                    <img className="image" src={this.props.img_url} alt={this.props.name} />
+                </div>  
+                <h3>Price: {this.props.price} per night</h3> 
+                <button onClick={() => this.handleClick()}>Make Reservation</button>
+            </div>
+        );
+    }
 }
 
 

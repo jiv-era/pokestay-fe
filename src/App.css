@@ -21,6 +21,17 @@
   background-color: white;
 }
 
+.home-card {
+  margin: 0.5vw;
+  border-style: solid;
+  border-radius: 5px;
+  border-color: black;
+  padding: 0.5vw;
+  position: relative;
+  text-align: center;
+  background-color: white;
+}
+
 .img-wrapper {
   height: 300px;
   overflow: hidden;
