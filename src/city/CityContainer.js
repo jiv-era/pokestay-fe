@@ -37,11 +37,14 @@ class CityContainer extends React.Component{
           return <CityDetails currentUser={this.props.currentUser} back={this.backButton} {...activeCity} />
         } else {
           return (
-            <div>
-            <div className="city-list">
-              {this.renderCityCards()}
-            </div>
-            </div>
+            <div className="city-container">
+              <div className="city-list">
+                {this.renderCityCards()}
+              </div>
+              <footer>
+                    <h3>© 2019 Inspired by Pokémon</h3>
+                </footer>
+            </div> 
       )
     }
   }  

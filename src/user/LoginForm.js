@@ -60,7 +60,7 @@ class LoginForm extends React.Component {
                     <a href="/signup">Not a Member?</a>
                 </Form>
                 <footer>
-                    <h3>© 2019 Pokémon</h3>
+                    <h3>© 2019 Inspired by Pokémon</h3>
                 </footer>
             </div>
         )

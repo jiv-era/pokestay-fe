@@ -10,14 +10,146 @@ img {
 
 
 
+/* Home */
+
+ /* .main-container{
+  display:grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 200px 600px;
+  
+}
+
+ .header {
+  grid-column: 1 / -1;
+} 
+
+.content{
+  grid-column: 2 / 1; 
+}  */
+
+/* SideBar */
+
+
+
+
+
+
 /* NavBar */
 
-.main-nav-li{
-display: inline;
+nav.main {
+  height: 115px;
+  background:white url("https://assets.pokemon.com/static2/_ui/img/chrome/container_bg.png");
+  right: 5%;
+}
 
+nav.main a {
+  border-bottom: 5px solid white;
+  text-decoration: none;
+  padding: 40px;
+  display: inline;
+  background-color: #313131;
+  color:white;
+  border-right: 3px solid black;
+  transition: 0.3s;
+  transform: .2s;
+  vertical-align: baseline;
+  cursor: pointer;
+  
+}
+
+nav.main a:first-child{
+  border-bottom-left-radius: 3px;
+}
+
+nav.main a:last-child{
+  border-right: none;
+  border-bottom-right-radius: 3px;
 }
 
 
+nav.main a#home-item{
+  
+  border-bottom-color: #919191;
+}
+
+nav.main a#home-item:hover{
+  background-color: #919191;
+  border-bottom-color:  #919191
+}
+
+nav.main a#profile-item{
+  
+  border-bottom-color: darkgreen;
+}
+
+nav.main a#profile-item:hover{
+  background-color: darkgreen;
+  border-bottom-color:  darkgreen;
+  color: white;
+  transform: scale(2);
+}
+
+nav.main a#pokedex-item{
+  
+  border-bottom-color: red;
+}
+
+nav.main a#pokedex-item:hover{
+  background-color: red;
+  border-bottom-color:  red;
+  color:white;
+  transform: scale(2);
+}
+
+nav.main a#logout-item{
+  
+  border-bottom-color: #33ccff;
+}
+
+nav.main a#logout-item:hover{
+  background-color: #33ccff;
+  border-bottom-color: #33ccff;
+  color: white;
+  transform: scale(2);
+}
+
+
+
+
+
+nav.main .navbar-list {
+  font-size: 20px;
+  margin-left: 32%;
+  padding-top: 2%;
+  
+  
+ 
+}
+
+
+
+
+/* City Container */
+
+.city-container{
+  background:#424242 url("https://assets.pokemon.com/static2/_ui/img/chrome/container_bg.png");
+  
+}
+
+.city-list{
+ display: grid;
+ grid-template-columns: repeat(5, 1fr);
+ overflow-inline: auto;
+}
+
+
+/* City Details */
+
+.home-list{
+ display: grid;
+ grid-template-columns: repeat(5, 1fr);
+ overflow-inline: auto;
+}
 
 
 
@@ -25,15 +157,18 @@ display: inline;
 
 /* CityCard */
 
+
+
 .city-card {
   margin: 0.5vw;
   border-style: solid;
   border-radius: 5px;
   border-color: black;
-  padding: 0.5vw;
+  padding: 1vw;
   position: relative;
   text-align: center;
-  background-color: white;
+  background-color: #f9f9f9;
+  color:black;
 }
 
 .home-card {
@@ -63,7 +198,7 @@ display: inline;
 
 
 
-
+/* -------------------------------------------------------------------------------------------------------------------------------------------*/
 
 
 /* SignUp */
@@ -92,7 +227,6 @@ display: inline;
   padding-top: 2%;
   padding-left: 2%;
   padding-right: 2%;
-
 }
 
 #p-login {
@@ -132,7 +266,7 @@ display: inline;
 }
 
 footer{
-  position: absolute;
+  position: fixed;
   width:100%;
   left:0;
   right:0;

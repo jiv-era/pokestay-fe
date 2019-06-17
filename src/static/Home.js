@@ -2,6 +2,7 @@ import React from 'react';
 import Navbar from '../global/Navbar.js'
 
 import CityContainer from '../city/CityContainer.js';
+import { Sidebar } from 'semantic-ui-react';
 
 
 class Home extends React.Component {
@@ -22,10 +23,16 @@ class Home extends React.Component {
 
     render(){
         return(
-            <div>
-            <Navbar currentUser={this.props.currentUser} />
-            <button onClick={this.props.logOut}>Log Out</button>
-            <CityContainer currentUser={this.props.currentUser} cities={this.state.cities}/>
+            <div className="main-container">
+                <div className="header">
+                    <Navbar currentUser={this.props.currentUser} logOut={this.props.logOut}/>
+                </div>
+                <div className="content">
+                    <CityContainer currentUser={this.props.currentUser} cities={this.state.cities}/>
+                </div>
+                <div className="sidebar">
+                    <Sidebar />
+                </div>
             </div>
         )
     }

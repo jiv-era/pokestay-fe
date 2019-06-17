@@ -7,6 +7,8 @@ import Profile from './user/Profile.js'
 import LoginForm from './user/LoginForm.js'
 import SignUpForm from './user/SignUpForm.js'
 
+import Pokedex from './interest/Pokedex.js'
+
 import { Route, Switch } from 'react-router-dom'
 
 class App extends React.Component {
@@ -61,6 +63,7 @@ class App extends React.Component {
           <Switch>
           <Route path="/home" render={(routerProps) => { return <Home logOut={this.logOut} {...routerProps} currentUser={this.state.currentUser } />}} />
           <Route path="/profile" render={(routerProps) => { return <Profile currentUser={this.state.currentUser} {...routerProps}/>}} />
+          <Route path="/pokedex" render={(routerProps) => { return <Pokedex /> }} />
           <Route path="/login" render={(routerProps) => { return <LoginForm setCurrentUser={this.setCurrentUser} {...routerProps} />}} /> 
           <Route path="/signup" render={(routerProps) => { return <SignUpForm setCurrentUser={this.setCurrentUser} {...routerProps} />}} />
           </Switch>        
