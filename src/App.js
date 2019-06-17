@@ -3,7 +3,7 @@ import './App.css';
 
 import Home from './static/Home.js'
 
-// import Profile from './user/Profile.js'
+import Profile from './user/Profile.js'
 import LoginForm from './user/LoginForm.js'
 import SignUpForm from './user/SignUpForm.js'
 
@@ -59,7 +59,8 @@ class App extends React.Component {
     return (
         <div className="App">
           <Switch>
-          <Route path="/home" render={(routerProps) => { return <Home logOut={this.logOut} {...routerProps} currentUser={this.state.currentUser} />}} />
+          <Route path="/home" render={(routerProps) => { return <Home logOut={this.logOut} {...routerProps} currentUser={this.state.currentUser } />}} />
+          <Route path="/profile" render={(routerProps) => { return <Profile currentUser={this.state.currentUser} {...routerProps}/>}} />
           <Route path="/login" render={(routerProps) => { return <LoginForm setCurrentUser={this.setCurrentUser} {...routerProps} />}} /> 
           <Route path="/signup" render={(routerProps) => { return <SignUpForm setCurrentUser={this.setCurrentUser} {...routerProps} />}} />
           </Switch>        

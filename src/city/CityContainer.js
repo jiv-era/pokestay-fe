@@ -37,8 +37,10 @@ class CityContainer extends React.Component{
           return <CityDetails currentUser={this.props.currentUser} back={this.backButton} {...activeCity} />
         } else {
           return (
+            <div>
             <div className="city-list">
               {this.renderCityCards()}
+            </div>
             </div>
       )
     }

@@ -1,12 +1,27 @@
 
 
 
-
-.wrapper{
-  width: 90%;
-  margin: 0 auto;
-  
+/* Body */
+img {
+  max-width: 100%;
+  max-height: 100%;
 }
+
+
+
+
+/* NavBar */
+
+.main-nav-li{
+display: inline;
+
+}
+
+
+
+
+
+
 
 /* CityCard */
 
@@ -53,11 +68,35 @@
 
 /* SignUp */
 
+
+.user-signup{
+  background-image: url("https://assets.pokemon.com/static2/_ui/img/chrome/body_bg.png");
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  display: inline-block;
+  margin: auto;
+}
+
 #signup-form {
 
-  width: 25%;
+  width: 32%;
   text-align: center;
+  border: 3px solid white;
+  background: white url("https://assets.pokemon.com/static2/_ui/img/chrome/container_bg.png");
+  box-shadow: 4px 5px grey;
+  height: 70%;
+  position: absolute;
+  right: 34%;
+  bottom: 20%;
+  padding-top: 2%;
+  padding-left: 2%;
+  padding-right: 2%;
 
+}
+
+#p-login {
+  text-align: center;
 }
 
 
@@ -65,19 +104,42 @@
 
 
 .user-login{
-  background-image: url("https://vignette.wikia.nocookie.net/pokemon/images/1/17/Kanto_HGSS.png/revision/latest?cb=20110213010237");
-  background-size: cover;
-  
+  background-image: url("https://assets.pokemon.com/static2/_ui/img/chrome/body_bg.png");
+  height: 100%;
+  width: 100%;
+  position: fixed;
 }
 
 
 #login-form {
   width: 25%;
-  text-align:center;
+  min-width: 25%;
+  max-width: 100%;
+  text-align: center;
   border: 3px solid white;
-  background: white;
-  box-shadow: 4px 5px black;
-  
+  background: white url("https://assets.pokemon.com/static2/_ui/img/chrome/container_bg.png");
+  box-shadow: 4px 5px grey;
+  height: 65%;
+  min-height: 65%;
+  max-height: 100%;
+  position: fixed;
+  right: 38%;
+  bottom: 20%;
+  padding-top: 2%;
+  padding-left: 2%;
+  padding-right: 2%;
+  display: inline-block;
+}
+
+footer{
+  position: absolute;
+  width:100%;
+  left:0;
+  right:0;
+  bottom:0;
+  text-align: center;
+  background-color:#424242;
+  color: whitesmoke;
 }
 
 

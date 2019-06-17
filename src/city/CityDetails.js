@@ -5,7 +5,7 @@ import HomeCard from '../home/HomeCard.js';
 class CityDetails extends React.Component {
 
     state = {
-        showHomes: true
+        showHomes: false
     }
 
     renderHomeCards = () => {

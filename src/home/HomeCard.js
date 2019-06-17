@@ -4,6 +4,9 @@ class HomeCard extends React.Component {
 
 
     state = {
+        name: this.props.name,
+        address: this.props.address, 
+        price: this.props.price,
         user_id: this.props.currentUser.id,
         home_id: this.props.id
     }
@@ -23,9 +26,11 @@ class HomeCard extends React.Component {
 
     handleClick = () => {
         this.newReservation()
+        alert('Your reservation has been made!')
     }
 
     render(){
+        console.log(this.props)
         return(
             <div className="home-card">
                 <h1>{this.props.name}</h1>

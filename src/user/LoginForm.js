@@ -46,6 +46,8 @@ class LoginForm extends React.Component {
         return(
             <div className="user-login">
                 <Form id='login-form' onSubmit={this.handleSubmit}>
+                    <img src="../pokestay2.png"  alt="pokestaylogo"/>
+                    <img src="../pokestaylogo3.png" alt="pokestayname" />
                     <Form.Field>
                         <input onChange={this.handleChange} name="username" value={this.state.username} placeholder="Username" required/>
                     </Form.Field>
@@ -58,7 +60,7 @@ class LoginForm extends React.Component {
                     <a href="/signup">Not a Member?</a>
                 </Form>
                 <footer>
-                    <h3>©Copyright 2019</h3>
+                    <h3>© 2019 Pokémon</h3>
                 </footer>
             </div>
         )

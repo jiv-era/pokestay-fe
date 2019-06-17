@@ -1,5 +1,6 @@
 import React from 'react';
 import Navbar from '../global/Navbar.js'
+
 import CityContainer from '../city/CityContainer.js';
 
 
@@ -22,6 +23,7 @@ class Home extends React.Component {
     render(){
         return(
             <div>
+            <Navbar currentUser={this.props.currentUser} />
             <button onClick={this.props.logOut}>Log Out</button>
             <CityContainer currentUser={this.props.currentUser} cities={this.state.cities}/>
             </div>

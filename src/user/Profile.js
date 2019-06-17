@@ -1,5 +1,23 @@
 import React from 'react';
 
 
+const Profile = (props) => {
 
-const profile 
+
+    return(
+        <div>
+            <h1>Profile</h1>
+
+            
+
+
+            <div className="reservation-list">
+            </div>
+        </div>
+    );
+
+}
+
+
+
+export default Profile;

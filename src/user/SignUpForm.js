@@ -50,9 +50,11 @@ class SignUpForm extends React.Component{
 
     render(){
         return(
-            <div className="wrapper">
                 <div className="user-signup">
                     <Form id='signup-form' onSubmit={this.handleSubmit}>
+                        <img  src="../signuplogo3.png" alt="signuplogo" />
+                        <img  src="../oakpn22.png" alt="oak" />
+                        
                         <Form.Field>
                             <input onChange={this.handleChange} name="username" value={this.state.username} placeholder="Username" required/>
                         </Form.Field>
@@ -67,9 +69,13 @@ class SignUpForm extends React.Component{
                         </Form.Field>
                         
                         <Button type="submit">Submit</Button>
+                        <br />
+                        <p id="p-login">If you already have an account, please <a href='/login'>log in now.</a></p>
                     </Form>
+                <footer>
+                    <h3>© 2019 Pokémon</h3>
+                </footer>
                 </div>
-            </div>
         )
     }
 
