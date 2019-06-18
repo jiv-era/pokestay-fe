@@ -38,6 +38,10 @@ class CityContainer extends React.Component{
         } else {
           return (
             <div className="city-container">
+              <br />
+              
+              <h1 className="welcome-line"> Choose a City you would like to stay in:</h1>
+              
               <div className="city-list">
                 {this.renderCityCards()}
               </div>

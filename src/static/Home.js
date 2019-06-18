@@ -2,7 +2,7 @@ import React from 'react';
 import Navbar from '../global/Navbar.js'
 
 import CityContainer from '../city/CityContainer.js';
-import { Sidebar } from 'semantic-ui-react';
+import Sidebar from '../global/Sidebar.js';
 
 
 class Home extends React.Component {

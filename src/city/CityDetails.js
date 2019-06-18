@@ -22,11 +22,13 @@ class CityDetails extends React.Component {
 
     render(){
         return(
-            <div>
+            <div className="city-details">
                 <h1>Welcome to {this.props.name}!</h1>
                 <h2>{this.props.region}</h2>
+                <p>{this.props.description}</p>
+                <p>Population: {this.props.population}</p>
                 <button onClick={() => this.props.back()}>Back</button>
-                <button onClick={() => this.handleClick()}>Available Homes</button>
+                <button id="home-button" onClick={() => this.handleClick()}>Available Homes</button>
                 { this.state.showHomes? 
                 <div className="home-list">
                     {this.renderHomeCards()}

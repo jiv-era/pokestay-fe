@@ -7,25 +7,41 @@ img {
   max-height: 100%;
 }
 
+/* Buttons */
+.city-details{
+  overflow: hidden;
+}
+
 
 
 
 /* Home */
 
- /* .main-container{
+ .main-container{
   display:grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 200px 600px;
+  grid-template-columns: repeat(5, 1fr);
   
 }
 
  .header {
+  display: grid;
   grid-column: 1 / -1;
 } 
 
+.sidebar{
+  grid-column: 5; 
+  background:white url("https://assets.pokemon.com/static2/_ui/img/chrome/container_bg.png");
+  border-left: 3px solid black;
+  border-top: 3px solid whitesmoke;
+
+
+} 
+
 .content{
-  grid-column: 2 / 1; 
-}  */
+  grid-column: 1 / -2;
+  
+}
+
 
 /* SideBar */
 
@@ -37,9 +53,11 @@ img {
 /* NavBar */
 
 nav.main {
-  height: 115px;
+  height: 100px;
   background:white url("https://assets.pokemon.com/static2/_ui/img/chrome/container_bg.png");
-  right: 5%;
+  right: 25%;
+  display: flex; 
+  justify-content: space-evenly;
 }
 
 nav.main a {
@@ -49,9 +67,9 @@ nav.main a {
   display: inline;
   background-color: #313131;
   color:white;
-  border-right: 3px solid black;
-  transition: 0.3s;
-  transform: .2s;
+  border-right: 2px solid black;
+  transition: 0.5s;
+  /* transform: 1s; */
   vertical-align: baseline;
   cursor: pointer;
   
@@ -74,7 +92,12 @@ nav.main a#home-item{
 
 nav.main a#home-item:hover{
   background-color: #919191;
-  border-bottom-color:  #919191
+  border-bottom-color:  #919191;
+  transform: scale(1.1);
+}
+
+nav.main a#home-item:active{
+  background-color: #919191;
 }
 
 nav.main a#profile-item{
@@ -86,7 +109,7 @@ nav.main a#profile-item:hover{
   background-color: darkgreen;
   border-bottom-color:  darkgreen;
   color: white;
-  transform: scale(2);
+  transform: scale(1.1);
 }
 
 nav.main a#pokedex-item{
@@ -98,7 +121,7 @@ nav.main a#pokedex-item:hover{
   background-color: red;
   border-bottom-color:  red;
   color:white;
-  transform: scale(2);
+  transform: scale(1.1);
 }
 
 nav.main a#logout-item{
@@ -110,7 +133,7 @@ nav.main a#logout-item:hover{
   background-color: #33ccff;
   border-bottom-color: #33ccff;
   color: white;
-  transform: scale(2);
+  transform: scale(1.1);
 }
 
 
@@ -118,12 +141,12 @@ nav.main a#logout-item:hover{
 
 
 nav.main .navbar-list {
-  font-size: 20px;
-  margin-left: 32%;
-  padding-top: 2%;
-  
-  
- 
+  font-size: 18px;
+  /* margin-left: 32%; */
+  /* padding-top: 2%; */
+  justify-content: space-evenly;
+  display:flex;
+
 }
 
 
@@ -133,14 +156,24 @@ nav.main .navbar-list {
 
 .city-container{
   background:#424242 url("https://assets.pokemon.com/static2/_ui/img/chrome/container_bg.png");
+  overflow: auto
   
 }
 
+.welcome-line {
+  text-align: center;
+  color:whitesmoke;
+}
+
+
 .city-list{
  display: grid;
- grid-template-columns: repeat(5, 1fr);
+ grid-template-columns: repeat(3, 3fr);
  overflow-inline: auto;
+ 
 }
+
+
 
 
 /* City Details */
