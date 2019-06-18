@@ -5,6 +5,7 @@ import CityContainer from '../city/CityContainer.js';
 import Sidebar from '../global/Sidebar.js';
 
 
+
 class Home extends React.Component {
 
     state = {
@@ -29,6 +30,7 @@ class Home extends React.Component {
                 </div>
                 <div className="content">
                     <CityContainer currentUser={this.props.currentUser} cities={this.state.cities}/>
+                    <br/>
                 </div>
                 <div className="sidebar">
                     <Sidebar />

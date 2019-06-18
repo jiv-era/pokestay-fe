@@ -38,7 +38,7 @@ class HomeCard extends React.Component {
                 <div className="img-wrapper">
                     <img className="image" src={this.props.img_url} alt={this.props.name} />
                 </div>  
-                <h3>Price: {this.props.price} per night</h3> 
+                <h3>${this.props.price}/night</h3> 
                 <button onClick={() => this.handleClick()}>Make Reservation</button>
             </div>
         );

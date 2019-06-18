@@ -2,23 +2,22 @@ import React from 'react';
 import Navbar from '../global/Navbar.js'
 
 
-const Profile = (props) => {
+class Profile extends React.Component {
 
-    
-    return(
-        <div>
-            <Navbar />
-          
-            
-
-            
-
-
-            <div className="reservation-list">
+    render () {
+        return(
+            <div className="profile-container">
+                <Navbar />
+                
+                <div className="profile-details">
+                    <h1>helllo</h1>
+                
+                {/* <div className="reservation-list">
+                </div> */}
+                </div>
             </div>
-        </div>
-    );
-
+        );
+    }
 }
 
 
