@@ -8,7 +8,8 @@ class HomeCard extends React.Component {
         address: this.props.address, 
         price: this.props.price,
         user_id: this.props.currentUser.id,
-        home_id: this.props.id
+        home_id: this.props.id,
+        showButton: true
     }
 
 
@@ -27,6 +28,9 @@ class HomeCard extends React.Component {
     handleClick = () => {
         this.newReservation()
         alert('Your reservation has been made!')
+        this.setState(prevState => ({
+            showButton: !prevState.showButton
+        }))
     }
 
     render(){
@@ -39,7 +43,7 @@ class HomeCard extends React.Component {
                     <img className="image" src={this.props.img_url} alt={this.props.name} />
                 </div>  
                 <h3>${this.props.price}/night</h3> 
-                <button onClick={() => this.handleClick()}>Make Reservation</button>
+                {this.state.showButton? <button onClick={() => this.handleClick()}>Make Reservation</button> : null}
             </div>
         );
     }

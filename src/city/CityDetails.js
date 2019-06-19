@@ -5,7 +5,7 @@ import HomeCard from '../home/HomeCard.js';
 class CityDetails extends React.Component {
 
     state = {
-        showHomes: false
+        showHomes: true
     }
 
     renderHomeCards = () => {
@@ -25,8 +25,8 @@ class CityDetails extends React.Component {
             <div className="city-details">
                 <h1>Welcome to {this.props.name}!</h1>
                 <h2>{this.props.region}</h2>
-                <p>{this.props.description}</p>
-                <p>Population: {this.props.population}</p>
+                <h3>{this.props.description}</h3>
+                <h4>Population: {this.props.population}</h4>
                 <button onClick={() => this.props.back()}>Back</button>
                 <button id="home-button" onClick={() => this.handleClick()}>Available Homes</button>
                 { this.state.showHomes? 
