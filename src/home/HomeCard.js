@@ -34,7 +34,6 @@ class HomeCard extends React.Component {
     }
 
     render(){
-        console.log(this.props)
         return(
             <div className="home-card">
                 <h1>{this.props.name}</h1>

@@ -33,6 +33,7 @@ class Home extends React.Component {
                     <br/>
                 </div>
                 <div className="sidebar">
+                    
                     <Sidebar />
                 </div>
             </div>

@@ -1,9 +1,23 @@
 import React from 'react'
 import Navbar from '../global/Navbar.js'
+// import PokemonCard from './PokemonCard.js'
 
 
 
 class Pokedex extends React.Component{
+
+    state = {
+        pokemon: {}
+    }
+
+
+    componentDidMount(){
+        this.getPokemon();
+    }
+
+    getPokemon = () => {
+        fetch("")
+    }
 
 
 

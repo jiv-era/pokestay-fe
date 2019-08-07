@@ -59,7 +59,7 @@ class SignUpForm extends React.Component{
                             <input onChange={this.handleChange} name="username" value={this.state.username} placeholder="Username" required/>
                         </Form.Field>
                         <Form.Field>
-                            <input onChange={this.handleChange} name="profile_pic" value={this.state.profile_pic} placeholder="Profile Pic" required/>
+                            <input onChange={this.handleChange} name="profile_pic" value={this.state.profile_pic} placeholder="Profile Pic URL" required/>
                         </Form.Field>
                         <Form.Field>
                             <input onChange={this.handleChange} type="password" name="password" value={this.state.password} placeholder="Password" required/>
